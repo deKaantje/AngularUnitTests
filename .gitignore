@@ -1,0 +1,6 @@
+/frontstart
+frontstart-data/core/components*
+frontstart-data/core/environment*
+frontstart-data/www/
+frontstart-temp/
+node_modules/

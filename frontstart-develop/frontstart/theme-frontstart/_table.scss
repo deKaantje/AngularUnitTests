@@ -1,0 +1,60 @@
+/**
+ * Table
+ */
+
+.table,
+.theme table {
+    border-collapse: collapse;
+    color: color(black, light);
+    font-size: font(primary, size);
+    line-height: font(primary, line-height);
+    margin-bottom: offset(2);
+
+    &.table-wide { width: 100%; }
+
+    &.table-fixed { table-layout: fixed; }
+
+    &.table-smoked { background-color: color(white, dark); }
+
+    &.table-zebra tbody tr:nth-child(odd) { background-color: color(white, dark); }
+
+    th,
+    td {
+        padding: offset(1-2) offset(1);
+        vertical-align: top;
+    }
+
+    th { text-align: left; }
+
+    thead {
+        th {
+            border-bottom: 2px solid color(gray, light);
+            padding-top: 0;
+        }
+    }
+
+    tbody {
+        td,
+        th { border-top: 1px solid color(gray, light); }
+    }
+
+    tfoot {
+        td {
+            border-top: 2px solid color(gray, light);
+            font-weight: bold;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+/**
+ * Table clean
+ */
+
+.table-clean {
+    border-collapse: collapse;
+    color: color(black, light);
+    line-height: font(primary, line-height);
+    margin-bottom: offset();
+}

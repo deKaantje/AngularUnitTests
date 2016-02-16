@@ -1,0 +1,1 @@
+call node frontstart-cli.js

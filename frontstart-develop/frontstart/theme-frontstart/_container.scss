@@ -1,0 +1,199 @@
+/**
+ * Container
+ */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+    @media #{$is-small} {
+        padding-left: offset();
+        padding-right: offset();
+    }
+
+    @media #{$is-medium} {
+        padding-left: offset(2);
+        padding-right: offset(2);
+    }
+
+    &.container-narrow { max-width: 800px; }
+}
+
+
+/**
+ * Container spread
+ */
+
+.containerSpread {
+    display: flex;
+    justify-content: space-between;
+
+    &.containerSpread-gutter-1-4 {
+        > *:not(:last-child) { margin-right: offset(1-4); }
+    }
+
+    &.containerSpread-gutter-1-2 {
+        > *:not(:last-child) { margin-right: offset(1-2); }
+    }
+
+    &.containerSpread-gutter-1 {
+        > *:not(:last-child) { margin-right: offset(); }
+    }
+
+    &.containerSpread-gutter-2 {
+        > *:not(:last-child) { margin-right: offset(2); }
+    }
+
+    &.containerSpread-gutter-3 {
+        > *:not(:last-child) { margin-right: offset(3); }
+    }
+
+    &.containerSpread-gutter-4 {
+        > *:not(:last-child) { margin-right: offset(4); }
+    }
+}
+
+
+/**
+ * Container stack
+ */
+
+.containerStack {
+    @extend .clearfix;
+
+    > * { float: left; }
+
+    // Gutter 1-4
+    &.containerStack-gutter-1-4:not(.containerStack-rtl) {
+        margin-left: -#{offset(1-4)};
+
+        > * { margin-left: offset(1-4); }
+    }
+
+    // Gutter 1-2
+    &.containerStack-gutter-1-2:not(.containerStack-rtl) {
+        margin-left: -#{offset(1-2)};
+
+        > * { margin-left: offset(1-2); }
+    }
+
+    // Gutter 1
+    &.containerStack-gutter-1:not(.containerStack-rtl) {
+        margin-left: -#{offset()};
+
+        > * { margin-left: offset(); }
+    }
+
+    // Gutter 2
+    &.containerStack-gutter-2:not(.containerStack-rtl) {
+        margin-left: -#{offset(2)};
+
+        > * { margin-left: offset(2); }
+    }
+
+    // Gutter 3
+    &.containerStack-gutter-3:not(.containerStack-rtl) {
+        margin-left: -#{offset(3)};
+
+        > * { margin-left: offset(3); }
+    }
+
+    // Gutter 4
+    &.containerStack-gutter-4:not(.containerStack-rtl) {
+        margin-left: -#{offset(4)};
+
+        > * { margin-left: offset(4); }
+    }
+
+
+    /**
+     * Right to left
+     */
+
+    &.containerStack-rtl {
+        > * { float: right; }
+
+        // Gutter 1-4
+        &.containerStack-gutter-1-4 {
+            margin-right: -#{offset(1-4)};
+
+            > * { margin-right: offset(1-4); }
+        }
+
+        // Gutter 1-2
+        &.containerStack-gutter-1-2 {
+            margin-right: -#{offset(1-2)};
+
+            > * { margin-right: offset(1-2); }
+        }
+
+        // Gutter 1
+        &.containerStack-gutter-1 {
+            margin-right: -#{offset()};
+
+            > * { margin-right: offset(); }
+        }
+
+        // Gutter 2
+        &.containerStack-gutter-2 {
+            margin-right: -#{offset(2)};
+
+            > * { margin-right: offset(2); }
+        }
+
+        // Gutter 3
+        &.containerStack-gutter-3 {
+            margin-right: -#{offset(3)};
+
+            > * { margin-right: offset(3); }
+        }
+
+        // Gutter 4
+        &.containerStack-gutter-4 {
+            margin-right: -#{offset(4)};
+
+            > * { margin-right: offset(4); }
+        }
+    }
+
+    // Media query
+    @mixin containerStack-break-block($size) {
+        &.containerStack-#{$size}-break,
+        &.containerStack-#{$size}-block {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+
+            > * {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        &.containerStack-#{$size}-break > * { clear: both; }
+
+        &.containerStack-#{$size}-block > * {
+            margin-left: 0;
+            margin-right: 0;
+            box-sizing: border-box;
+            display: block;
+            float: none;
+            width: 100%;
+        }
+    }
+
+    @media #{$is-small} {
+        &.containerStack-small-break,
+        &.containerStack-small-block { @include containerStack-break-block(small) }
+    }
+
+    @media #{$is-medium} {
+        &.containerStack-small-break,
+        &.containerStack-small-block { @include containerStack-break-block(medium) }
+    }
+
+    @media #{$is-large} {
+        &.containerStack-small-break,
+        &.containerStack-small-block { @include containerStack-break-block(large) }
+    }
+}

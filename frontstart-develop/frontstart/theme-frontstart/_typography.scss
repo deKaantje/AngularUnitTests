@@ -1,0 +1,242 @@
+/**
+ * HTML
+ */
+
+html {
+    color: font(primary, color);
+    font: #{font(primary, size)}/#{font(primary, line-height)} font(primary);
+    -webkit-text-size-adjust: none;
+}
+
+
+/**
+ * Heading
+ */
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.theme h1,
+.theme h2,
+.theme h3,
+.theme h4,
+.theme h5,
+.theme h6 {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: offset();
+    padding-top: offset();
+
+    &.hx-underlined { border-bottom: 1px solid color(gray, light); }
+
+    small {
+        color: color(gray, dark);
+        font-size: 0.75em;
+    }
+}
+
+.h1,
+.theme h1 {
+    font-size: 2.25rem;
+    padding-top: 0;
+}
+
+.h2,
+.theme h2 { font-size: 1.75rem; }
+
+.h3,
+.theme h3 { font-size: 1.5rem; }
+
+.h4,
+.theme h4 { font-size: 1.25rem; }
+
+.h5,
+.theme h5 {
+    color: color(gray);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: offset(1-4);
+    text-transform: uppercase;
+}
+
+.h6,
+.theme h6 {
+    color: color(gray);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: offset(1-4);
+}
+
+
+/**
+ * Paragraph
+ */
+
+.p,
+.theme p {
+    font-size: font(primary, size);
+    line-height: font(primary, line-height);
+    margin-bottom: offset();
+    margin-top: 0;
+
+    // Big
+    &.p-big {
+        font-size: font(primary, size-large);
+        margin-bottom: offset(2);
+    }
+
+    // Tiny
+    &.p-tiny { font-size: font(primary, size-small); }
+
+    // Stretched
+    &.p-stretched { line-height: font(primary, line-height-large); }
+
+    // Compressed
+    &.p-compressed { line-height: font(primary, line-height-small); }
+}
+
+
+/**
+ * Anchor
+ */
+
+.a,
+.theme a {
+    color: color(blue);
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover { color: lighten(color(blue), 15%); }
+}
+
+
+
+/**
+ * Style
+ */
+
+.strong,
+.theme strong { font-weight: 700; }
+
+.em,
+.theme em { font-style: italic; }
+
+.q,
+.theme q {
+    font-family: font(secundary);
+
+    &::before { content: open-quote; }
+
+    &::after { content: close-quote; }
+}
+
+.pre { margin: 0 0 offset(2) !important; }
+
+.code,
+.theme code {
+    @include background-image(linear-gradient(
+        color(gray, light) calc(100% - 1px),
+        color(gray)
+    ));
+    background-color: color(gray, light);
+    color: color(gray, dark);
+    display: inline-block;
+    font-family: monospace;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+pre[class*="language-"] {
+    @extend .border-radius;
+    background-color: color(white, dark);
+    border: 1px solid color(gray, light);
+}
+
+
+/**
+ * Horizontal rule
+ */
+
+.hr,
+.theme hr {
+    background-color: color(gray, light);
+    border: none;
+    height: 1px;
+    margin-bottom: offset(2);
+    margin-top: offset(2);
+}
+
+
+/**
+ * List
+ */
+
+// Unordered list
+.ul,
+.theme ul {
+    font-size: font(primary, size);
+    line-height: font(primary, line-height);
+    list-style: none;
+    margin-bottom: offset();
+    margin-top: 0;
+    padding-left: offset();
+
+    > li {
+        margin-bottom: offset(1-4);
+        padding-left: 1em;
+        position: relative;
+
+        &:last-child { margin-bottom: 0; }
+
+        &::before {
+            background-color: color(gray, dark);
+            content: "";
+            height: 0.35em;
+            left: 0;
+            position: absolute;
+            top: 0.45em;
+            width: 0.35em;
+        }
+    }
+}
+
+// Ordered list
+.ol,
+.theme ol {
+    font-size: font(primary, size);
+    line-height: font(primary, line-height);
+    margin: 0 0 offset() 1.5em;
+    margin-top: 0;
+    padding-left: offset(1-2);
+
+    > li {
+        margin-bottom: offset(1-4);
+
+        &:last-child { margin-bottom: 0; }
+    }
+}
+
+// Data list
+.dl,
+.theme dl {
+    font-size: font(primary, size);
+    line-height: font(primary, line-height);
+    margin-bottom: offset();
+    margin-top: 0;
+    padding-left: offset();
+
+    > dt {
+        font-weight: bold;
+        margin-bottom: offset(1-4);
+    }
+
+    > dd {
+        margin-bottom: offset(1-4);
+        margin-left: offset();
+
+        &:last-child { margin-bottom: 0; }
+    }
+}

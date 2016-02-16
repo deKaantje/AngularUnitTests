@@ -1,0 +1,20 @@
+/**
+ * Media
+ */
+
+.figure {
+    margin: 0 0 offset(2);
+    max-width: 640px;
+    padding: 0;
+
+    img {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        max-width: 100%;
+    }
+
+    figcaption {
+        font-size: font(primary, size-small);
+        line-height: font(primary, line-height);
+        margin: offset(1-2) 0 0;
+    }
+}

@@ -1,0 +1,87 @@
+/**
+ * Import
+ */
+
+@import "bourbon";
+@import "environment";
+@import "essential";
+@import "components";
+
+
+/**
+ * Style to communicate with JavaScript
+ */
+
+html::before,
+html::after { display: none; }
+
+// Size
+@media #{$is-small} {
+    html::before { content: "small"; }
+}
+
+@media #{$is-medium} {
+    html::before { content: "medium"; }
+}
+
+@media #{$is-large} {
+    html::before { content: "large"; }
+}
+
+// HDPI
+@media #{$is-hdpi} {
+    html::after { content: "hdpi"; }
+}
+
+
+/**
+ * Logo
+ */
+
+.logo-frontstart {
+    background-color: #6b8e23;
+    border-radius: 0.05em;
+    color: #fff;
+    display: inline-block;
+    font-family: "Verdana", "Arial";
+    font-size: 5rem /* < IE 11 can't handle rem value in font shorthand */;
+    line-height: 0.75;
+    padding-bottom: 0.25em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 1em;
+
+    &::before {
+        content: "F";
+        font-size: 0.6em;
+        padding-right: 0.05em;
+    }
+
+    &::after {
+        content: "S";
+        font-size: 0.5em;
+        padding-left: 0.05em;
+    }
+
+    &.logo-frontstart-inline {
+        font-size: 1em;
+        vertical-align: text-top;
+    }
+
+    &.logo-frontstart-big {
+        font-size: 12rem;
+
+        span { font-size: 0.08em; }
+    }
+
+    &.logo-frontstart-different { background-color: #3073aa; }
+
+    span {
+        position: absolute;
+        font-size: 0.1em;
+        left: 0.5em;
+        line-height: 1;
+        top: 0.5em;
+    }
+}

@@ -1,0 +1,247 @@
+@media #{$is-large} {
+
+
+    /**
+     * Variable: Media
+     */
+
+    // Config
+    $media-size: large;
+
+    // Check for extended version
+    @if $extendedVersion == true {
+
+
+        /**
+         * Positioning
+         */
+
+        .element-#{$media-size}-float-left { float: left !important; }
+
+        .element-#{$media-size}-float-right { float: right !important; }
+
+        .element-#{$media-size}-float-none { float: none !important; }
+
+        .element-#{$media-size}-clear,
+        .element-#{$media-size}-clear-both { clear: both !important; }
+
+        .element-#{$media-size}-clear-left { clear: left !important; }
+
+        .element-#{$media-size}-clear-right { clear: right !important; }
+
+        .element-#{$media-size}-static { position: static !important; }
+
+        .element-#{$media-size}-relative { position: relative !important; }
+
+        .element-#{$media-size}-absolute { position: absolute !important; }
+
+        .element-#{$media-size}-fixed { position: fixed !important; }
+
+
+        /**
+         * Overflow
+         */
+
+        .element-#{$media-size}-overflow { overflow: visible !important; }
+
+        .element-#{$media-size}-overflow-auto { overflow: auto !important; }
+
+        .element-#{$media-size}-overflow-hidden { overflow: hidden !important; }
+
+
+        /**
+         * Size
+         */
+
+        .element-#{$media-size}-height-auto { height: auto !important; }
+
+        .element-#{$media-size}-height-1-1 { height: 100% !important; }
+
+        .element-#{$media-size}-height-1-2 { height: 50% !important; }
+
+        .element-#{$media-size}-height-1-4 { height: 25% !important; }
+
+        .element-#{$media-size}-width-auto { width: auto !important; }
+
+        .element-#{$media-size}-width-1-1 { width: 100% !important; }
+
+
+        /**
+         * Margin
+         */
+
+        .element-#{$media-size}-margin-0 { margin: 0 !important; }
+
+        .element-#{$media-size}-margin,
+        .element-#{$media-size}-margin-1 { margin: offset() !important; }
+
+        .element-#{$media-size}-margin-2 { margin: offset(2) !important; }
+
+        .element-#{$media-size}-margin-3 { margin: offset(3) !important; }
+
+        .element-#{$media-size}-margin-4 { margin: offset(4) !important; }
+
+        .element-#{$media-size}-margin-auto {
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        // Top
+        .element-#{$media-size}-margin-top-0 { margin-top: 0 !important; }
+
+        .element-#{$media-size}-margin-top,
+        .element-#{$media-size}-margin-top-1 { margin-top: offset() !important; }
+
+        .element-#{$media-size}-margin-top-2 { margin-top: offset(2) !important; }
+
+        .element-#{$media-size}-margin-top-3 { margin-top: offset(3) !important; }
+
+        .element-#{$media-size}-margin-top-4 { margin-top: offset(4) !important; }
+
+        // Right
+        .element-#{$media-size}-margin-right-0 { margin-right: 0 !important; }
+
+        .element-#{$media-size}-margin-right,
+        .element-#{$media-size}-margin-right-1 { margin-right: offset() !important; }
+
+        .element-#{$media-size}-margin-right-2 { margin-right: offset(2) !important; }
+
+        .element-#{$media-size}-margin-right-3 { margin-right: offset(3) !important; }
+
+        .element-#{$media-size}-margin-right-4 { margin-right: offset(4) !important; }
+
+        // Bottom
+        .element-#{$media-size}-margin-bottom-0 { margin-bottom: 0 !important; }
+
+        .element-#{$media-size}-margin-bottom,
+        .element-#{$media-size}-margin-bottom-1 { margin-bottom: offset() !important; }
+
+        .element-#{$media-size}-margin-bottom-2 { margin-bottom: offset(2) !important; }
+
+        .element-#{$media-size}-margin-bottom-3 { margin-bottom: offset(3) !important; }
+
+        .element-#{$media-size}-margin-bottom-4 { margin-bottom: offset(4) !important; }
+
+        // Left
+        .element-#{$media-size}-margin-left-0 { margin-left: 0 !important; }
+
+        .element-#{$media-size}-margin-left,
+        .element-#{$media-size}-margin-left-1 { margin-left: offset() !important; }
+
+        .element-#{$media-size}-margin-left-2 { margin-left: offset(2) !important; }
+
+        .element-#{$media-size}-margin-left-3 { margin-left: offset(3) !important; }
+
+        .element-#{$media-size}-margin-left-4 { margin-left: offset(4) !important; }
+
+
+        /**
+         * Padding
+         */
+
+        .element-#{$media-size}-padding-0 { padding: 0 !important; }
+
+        .element-#{$media-size}-padding,
+        .element-#{$media-size}-padding-1 { padding: offset() !important; }
+
+        .element-#{$media-size}-padding-2 { padding: offset(2) !important; }
+
+        .element-#{$media-size}-padding-3 { padding: offset(3) !important; }
+
+        .element-#{$media-size}-padding-4 { padding: offset(4) !important; }
+
+        // Top
+        .element-#{$media-size}-padding-top-0 { padding-top: 0 !important; }
+
+        .element-#{$media-size}-padding-top,
+        .element-#{$media-size}-padding-top-1 { padding-top: offset() !important; }
+
+        .element-#{$media-size}-padding-top-2 { padding-top: offset(2) !important; }
+
+        .element-#{$media-size}-padding-top-3 { padding-top: offset(3) !important; }
+
+        .element-#{$media-size}-padding-top-4 { padding-top: offset(4) !important; }
+
+        // Right
+        .element-#{$media-size}-padding-right-0 { padding-right: 0 !important; }
+
+        .element-#{$media-size}-padding-right,
+        .element-#{$media-size}-padding-right-1 { padding-right: offset() !important; }
+
+        .element-#{$media-size}-padding-right-2 { padding-right: offset(2) !important; }
+
+        .element-#{$media-size}-padding-right-3 { padding-right: offset(3) !important; }
+
+        .element-#{$media-size}-padding-right-4 { padding-right: offset(4) !important; }
+
+        // Bottom
+        .element-#{$media-size}-padding-bottom-0 { padding-bottom: 0 !important; }
+
+        .element-#{$media-size}-padding-bottom,
+        .element-#{$media-size}-padding-bottom-1 { padding-bottom: offset() !important; }
+
+        .element-#{$media-size}-padding-bottom-2 { padding-bottom: offset(2) !important; }
+
+        .element-#{$media-size}-padding-bottom-3 { padding-bottom: offset(3) !important; }
+
+        .element-#{$media-size}-padding-bottom-4 { padding-bottom: offset(4) !important; }
+
+        // Left
+        .element-#{$media-size}-padding-left-0 { padding-left: 0 !important; }
+
+        .element-#{$media-size}-padding-left,
+        .element-#{$media-size}-padding-left-1 { padding-left: offset() !important; }
+
+        .element-#{$media-size}-padding-left-2 { padding-left: offset(2) !important; }
+
+        .element-#{$media-size}-padding-left-3 { padding-left: offset(3) !important; }
+
+        .element-#{$media-size}-padding-left-4 { padding-left: offset(4) !important; }
+
+
+        /**
+         * Text
+         */
+
+        .element-#{$media-size}-text-left { text-align: left !important; }
+        .element-#{$media-size}-text-center { text-align: center !important; }
+        .element-#{$media-size}-text-right { text-align: right !important; }
+
+
+        /**
+         * Transparency
+         */
+
+        .element-#{$media-size}-transparent { opacity: 0 !important; }
+
+        .element-#{$media-size}-semi-transparent { opacity: 0.5 !important; }
+
+        .element-#{$media-size}-opaque { opacity: 1 !important; }
+
+
+        /**
+         * Visibility
+         */
+
+        .element-#{$media-size}-visible { visibility: visible !important; }
+
+        .element-#{$media-size}-invisible { visibility: hidden !important; }
+    } // End of extended version
+
+
+    /**
+     * Shown and hidden
+     */
+
+    .element-#{$media-size}-hidden { display: none !important; }
+
+    .element-#{$media-size}-shown,
+    .element-#{$media-size}-block { display: block !important; }
+
+    .element-#{$media-size}-shown-inline,
+    .element-#{$media-size}-inline { display: inline !important; }
+
+    .element-#{$media-size}-shown-inline-block,
+    .element-#{$media-size}-inline-block { display: inline-block !important; }
+}

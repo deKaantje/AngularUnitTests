@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Grid FrontStart</title>
+    <meta name="description" content="Grid FrontStart is a contributed component by FrontStart" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <link href="/frontstart/main.css" rel="stylesheet" />
+    <link href="//frontstart.org/hosted/prism.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="nav" data-nav-sticky>
+        <div class="container">
+            <span class="nav--toggle" data-nav-sticky-toggle><i class="fa fa-navicon"></i> Menu</span>
+
+            <ul class="nav--menu" data-nav-sticky-menu>
+                <li><a href="http://www.frontstart.org"><span class="logo-frontstart logo-frontstart-inline"></span> FrontStart</a></li>
+                <li><a href="http://www.frontstart.org/download">Download</a></li>
+                <li><a href="http://www.frontstart.org/documentation">Documentation</a></li>
+                <li class="active"><a href="http://www.frontstart.org/components">Components</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" data-nav-sticky-offset="marginTop">
+        <div class="container">
+
+            <h1 class="h1 element-inline-block element-margin-bottom-0">
+                <span class="element-small-hidden logo-frontstart logo-inline"></span>
+                Grid FrontStart
+            </h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+
+            <!-- Aside -->
+            <aside class="cell-1-6 cell-small-1-1">
+                <nav class="navAside" data-navAside>
+                    <h5 class="h5">Topics</h5>
+                    <ul class="navAside--menu" data-navAside-menu>
+                        <li><a href="#download">Download</a></li>
+                        <li>
+                            <a href="#basic-usage">Basic usage</a>
+                            <ul>
+                                <li><a href="#default-cell">Default cell</a></li>
+                                <li><a href="#responsive-cell">Responsive cell</a></li>
+                                <li><a href="#offset">Offset</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#advanced-usage">Advanced usage</a>
+                            <ul>
+                                <li><a href="#gutter">Gutter</a></li>
+                                <li><a href="#right-to-left">Right to left</a></li>
+                                <li><a href="#break">break</a></li>
+                            </ul>
+                        </li>
+                        <li class="navAside--top"><a href="#">Back to top</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="cell-5-6 cell-small-1-1">
+                <p class="p p-big">
+                    Make responsive layouts on the fly with Grid FrontStart. The best and most easy grid system you can find on the web.
+                </p>
+
+                <!-- Download -->
+                <section data-nav-aside-section id="download">
+                    <h1 class="h2 hx-underlined">Download Grid FrontStart</h2>
+
+                    <div class="grid">
+                        <div class="cell-1-2 cell-small-1-1">
+                            <h3 class="h3">FrontStart component</h3>
+                            <div class="containerStack containerStack-gutter-1 containerStack-small-block containerStack-medium-block">
+                                <a class="button" href="https://github.com/frontstart/grid-frontstart/archive/1.1.1.zip">
+                                    <i class="button--icon fa fa-download"></i> Download <small>1.1.1</small>
+                                </a>
+                                <a class="button button-secundary" href="https://github.com/frontstart/grid-frontstart" target="_blank">
+                                    <i class="button--icon fa fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                            <p class="p">
+                                You can also add Theme FrontStart to your <code class="code">bower.json</code> file in your FrontStart project.
+                            </p>
+                        </div>
+
+                        <div class="cell-1-2 cell-small-1-1">
+                            <h3 class="h3">Compiled</h3>
+                            <div class="containerStack containerStack-gutter-1 containerStack-small-block containerStack-medium-block">
+                                <a class="button" href="http://www.frontstart.org/download/grid-frontstart-1.0.0cmp.zip">
+                                    <i class="button--icon fa fa-download"></i> Download <small>1.0.0cmp</small>
+                                </a>
+                            </div>
+                            <p class="p">
+                                Download this version for usage without FrontStart.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="h3">Compatibility</h3>
+                    <table class="table table-zebra">
+                        <tr>
+                            <th>Compatibility</th>
+                            <td>FrontStart 0.6.0 or higher</td>
+                        </tr>
+                        <tr>
+                            <th>Required FrontStart components</th>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <th>Dependencies</th>
+                            <td>None</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Basic usage -->
+                <section data-nav-aside-section id="basic-usage">
+                    <h2 class="h2 hx-underlined">Basic usage</h2>
+
+                    <div data-nav-aside-section id="default-cell">
+                        <h3 class="h3">Default cell</h3>
+                        <p class="p">
+                            Create cells based on a twelfth (1/12) layout.
+                            For example 1/5 does not fit in a twelfth layout, but 1/4 does.
+                            Every cell will stack from left to right continues on the next line if it does not fit on the current line.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="code">.grid</code></td>
+                                    <td>Container</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.cell-1-12</code> up to <code class="code">.cell-12-12</code></td>
+                                    <td>Width values based on one/twelfth. Other values like <code class="code">.cell-1-4</code> are also availible</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="grid">
+    &lt;div class="cell-1-2">&lt;/div>
+    &lt;div class="cell-1-2">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-3-4">&lt;/div>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="grid">
+                                <div class="cell-1-2"><div class="cell-demo">1/2</div></div>
+                                <div class="cell-1-2"><div class="cell-demo">1/2</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                                <div class="cell-3-4"><div class="cell-demo-alternate">3/4</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-nav-aside-section id="responsive-cell">
+                        <h3 class="h3">Responsive cell</h3>
+                        <p class="p">
+                            Override the default cell property when your screen has a certain viewport width based on the global media queries.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="code">.cell-small-1-4</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.cell-medium-2-4</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.cell-large-3-4</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="grid">
+    &lt;div class="cell-1-2 cell-small-1-1">&lt;/div>
+    &lt;div class="cell-1-2 cell-small-1-1">&lt;/div>
+    &lt;div class="cell-1-4 cell-medium-1-3 cell-large-2-4">&lt;/div>
+    &lt;div class="cell-3-4 cell-medium-1-3 cell-large-2-4">&lt;/div>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="grid">
+                                <div class="cell-1-2 cell-small-1-1"><div class="cell-demo">1/2 - small 1/1</div></div>
+                                <div class="cell-1-2 cell-small-1-1"><div class="cell-demo">1/2 - small 1/1</div></div>
+                                <div class="cell-1-4 cell-medium-1-3 cell-large-2-4"><div class="cell-demo-alternate">1/4  - medium 1/3 - large 2/4</div></div>
+                                <div class="cell-3-4 cell-medium-1-3 cell-large-2-4"><div class="cell-demo-alternate">3/4  - medium 1/3 - large 2/4</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-nav-aside-section id="offset">
+                        <h3 class="h3">Offset</h3>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="code">.offset-1-12</code> up to <code class="code">.offset-12-12</code></td>
+                                    <td>Add offset to a cell</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.offset-small-1-4</code>
+                                    </td><td>Responsive override</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.offset-medium-2-4</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.offset-large-3-4</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="grid">
+    &lt;div class="cell-1-2 cell-small-1-1">&lt;/div>
+    &lt;div class="cell-1-2 cell-small-1-1">&lt;/div>
+    &lt;div class="cell-1-4 cell-medium-1-3 cell-large-2-4">&lt;/div>
+    &lt;div class="cell-3-4 cell-medium-1-3 cell-large-2-4">&lt;/div>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="grid">
+                                <div class="cell-1-3"><div class="cell-demo">1/3 - small 1/1</div></div>
+                                <div class="cell-1-3 offset-1-4 offset-small-0"><div class="cell-demo">1/3 - offset 1/4 - offset small 0</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Advanced usage -->
+                <section data-nav-aside-section id="advanced-usage">
+                    <h2 class="h2 hx-underlined">Advanced usage</h2>
+
+                    <div data-nav-aside-section id="gutter">
+                        <h3 class="h3">Gutter</h3>
+                        <p class="p">
+                            By default there is a gutter specified in the source files. You can override the gutter with the global offset values
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-0</code></td>
+                                    <td>Remove gutter</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-1-4</code></td>
+                                    <td>Override the default gutter to "offset 1/4"</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-1-2</code></td>
+                                    <td>Override the default gutter to "offset 1/2"</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-1</code></td>
+                                    <td>Override the default gutter to "offset 1"</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-2</code></td>
+                                    <td>Override the default gutter to "offset 2"</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-3</code></td>
+                                    <td>Override the default gutter to "offset 3"</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-gutter-4</code></td>
+                                    <td>Override the default gutter to "offset 4"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="grid grid-gutter-0">
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+&lt;/div>
+
+&lt;div class="grid grid-gutter-1-2">
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+&lt;/div>
+
+&lt;div class="grid grid-gutter-1">
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="grid grid-gutter-0">
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                            </div>
+                            <div class="grid grid-gutter-1-2">
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                            </div>
+
+                            <div class="grid grid-gutter-1">
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo-alternate">1/4</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-nav-aside-section id="right-to-left">
+                        <h3 class="h3">Right to left</h3>
+                        <p class="p">
+                            Reverse the cell direction. Offset and other properties will be respected.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="code">.grid-rtl</code></td>
+                                    <td>Reverse cell direction</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="grid grid-rtl">
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4 offset-1-4">&lt;/div>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="grid grid-rtl">
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4 offset-1-12"><div class="cell-demo">1/4 - offset 1/12</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-nav-aside-section id="break">
+                        <h3 class="h3">Break</h3>
+                        <p class="p">
+                            Create a pattern to break cells to a new line.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="code">.grid-break-1</code> up to <code class="code">.grid-break-12</code></td>
+                                    <td>Pattern to break after every nth cell</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-break-small-2</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                                    <td><code class="code">.grid-break-medium-3</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="code">.grid-break-large-4</code></td>
+                                    <td>Responsive override</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="grid grid-break-3 grid-break-small-2">
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+    &lt;div class="cell-1-4">&lt;/div>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="grid grid-break-3 grid-break-small-2">
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                                <div class="cell-1-4"><div class="cell-demo">1/4</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div><!-- / Content -->
+        </div>
+    </div><!-- / .container -->
+
+    <!-- Footer -->
+    <footer class="footer" data-footer-sticky>
+        <div class="container">
+            <p class="p p-tiny">
+                &copy; 2015 <a href="http://www.frontstart.org" class="a">FrontStart</a> -
+                Created by Ben Besuijen
+            </p>
+        </div>
+    </footer>
+
+    <script src="http://frontstart.org/hosted/prism.js"></script>
+    <script src="/frontstart/main.js"></script>
+    <!-- @exclude -->
+    <script>
+      document.write('<script src="http://'
+      + (location.host || 'localhost').split(':')[0]
+      + ':35729/livereload.js"></'
+      + 'script>');
+    </script>
+    <!-- @endexclude -->
+</body>
+</html>

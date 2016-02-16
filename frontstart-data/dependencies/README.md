@@ -1,0 +1,1 @@
+Add here dependencies for your project. All CSS and JS files are compiled to dependecies.css and dependencies.js in the component (frontstart) folder.

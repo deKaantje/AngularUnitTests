@@ -1,0 +1,3 @@
+var environment = {
+    distribution: 'production'
+};

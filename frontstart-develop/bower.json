@@ -1,0 +1,8 @@
+{
+  "name": "frontstart",
+  "devDependencies": {
+    "element-frontstart": "git://github.com/frontstart/element-frontstart.git",
+    "grid-frontstart": "git://github.com/frontstart/grid-frontstart.git",
+    "theme-frontstart": "git://github.com/frontstart/theme-frontstart.git"
+  }
+}

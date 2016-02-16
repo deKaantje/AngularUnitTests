@@ -1,0 +1,139 @@
+/**
+ * Form input
+ */
+
+$inputHeight: 38px;
+
+%input {
+    background-color: color(white);
+    border: 1px solid color(gray);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: font(primary, color);
+    display: block;
+    font-family: inherit;
+    font-size: font(primary, size);
+    margin-bottom: offset();
+    outline: none;
+    padding-left: offset(1-2);
+    padding-right: offset(1-2);
+    width: 100%;
+
+    @include placeholder { color: color(gray, darker); }
+
+    &:focus { border-color: color(blue); }
+}
+
+// Input
+.input,
+.theme input,
+.theme input[type="email"],
+.theme input[type="number"],
+.theme input[type="password"],
+.theme input[type="tel"],
+.theme input[type="text"],
+.theme input[type="url"] {
+    @extend %input;
+    height: $inputHeight;
+}
+
+// Checkbox
+.inputCheckbox,
+.theme input[type="checkbox"] {
+    cursor: pointer;
+    height: $inputHeight;
+    margin: 0 0 offset();
+    width: 14px;
+}
+
+// Radio
+.inputRadio,
+.theme input[type="radio"] {
+    @extend .inputCheckbox;
+}
+
+// Select
+.select,
+.theme select {
+    @extend %input;
+    cursor: pointer;
+    height: $inputHeight;
+}
+
+// Textarea
+.textarea,
+.theme textarea {
+    @extend %input;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+/**
+ * Form structure
+ */
+
+// Form
+.form,
+.theme form { margin-bottom: offset(2); }
+
+// Fieldset
+.fieldset,
+.theme fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Legend
+.legend,
+.theme legend { @extend .h6; }
+
+// Label
+.label,
+.theme label {
+    @include user-select(none);
+    display: block;
+    font-size: font(primary, size);
+    font-weight: bold;
+    margin-bottom: offset(1-4);
+}
+
+// Label for
+.labelFor {
+    @include user-select(none);
+    cursor: pointer;
+    display: block;
+    font-size: font(primary, size);
+    line-height: 38px;
+    margin-bottom: offset();
+    padding-right: offset();
+
+    .inputCheckbox,
+    .inputRadio {
+        float: left;
+        margin-bottom: 0;
+        margin-right: offset(1-4);
+    }
+}
+
+// Input stack
+.inputStack {
+    @extend .clearfix;
+
+    @media #{$is-medium-large} {
+        > * { float: left; }
+
+        .label:first-child {
+            box-sizing: border-box;
+            margin-bottom: offset();
+            padding: 8px offset(2) 8px 0;
+            text-align: right;
+            width: 200px;
+        }
+
+        .input,
+        .select,
+        .textarea { width: calc(100% - 200px); }
+    }
+}

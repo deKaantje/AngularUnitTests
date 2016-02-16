@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Theme FrontStart</title>
+    <meta name="description" content="Use this theme as a kickstart for your own theme. The basic style look also good to quickly set up a website." />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <link href="/frontstart/main.css" rel="stylesheet" />
+    <link href="//frontstart.org/hosted/prism.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="nav" data-nav-sticky>
+        <div class="container">
+            <span class="nav--toggle" data-nav-sticky-toggle><i class="fa fa-navicon"></i> Menu</span>
+
+            <ul class="nav--menu" data-nav-sticky-menu>
+                <li><a href="http://www.frontstart.org"><span class="logo-frontstart logo-frontstart-inline"></span> FrontStart</a></li>
+                <li><a href="http://www.frontstart.org/download">Download</a></li>
+                <li><a href="http://www.frontstart.org/documentation">Documentation</a></li>
+                <li class="active"><a href="http://www.frontstart.org/components">Components</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" data-nav-sticky-offset="marginTop">
+        <div class="container">
+
+            <h1 class="h1 element-inline-block element-margin-bottom-0">
+                <span class="element-small-hidden logo-frontstart logo-inline"></span>
+                Theme FrontStart
+            </h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+
+            <!-- Aside -->
+            <aside class="cell-1-6 cell-small-1-1">
+                <nav class="navAside" data-navAside>
+                    <h5 class="h5">Topics</h5>
+                    <ul class="navAside--menu" data-navAside-menu>
+                        <li><a href="#download">Download</a></li>
+                        <li>
+                            <a href="#css-elements">CSS elements</a>
+                            <ul>
+                                <li><a href="#typography">Typography</a></li>
+                                <li><a href="#tables">Tables</a></li>
+                                <li><a href="#buttons">Buttons</a></li>
+                                <li><a href="#forms">Forms</a></li>
+                                <li class="navAside--top"><a href="#">Back to top</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="cell-5-6 cell-small-1-1">
+                <p class="p p-big">
+                    Use this theme as a kickstart for your own theme.
+                    No plans to create your own theme? The basic style look also good to quickly set up a website.
+                </p>
+
+                <!-- Download -->
+                <section data-nav-aside-section id="download">
+                    <h1 class="h2 hx-underlined">Download Theme FrontStart</h2>
+
+                    <div class="grid">
+                        <div class="cell-1-2 cell-small-1-1">
+                            <h3 class="h3">FrontStart component</h3>
+                            <div class="containerStack containerStack-gutter-1 containerStack-small-block containerStack-medium-block">
+                                <a class="button" href="https://github.com/frontstart/theme-frontstart/archive/1.1.1.zip">
+                                    <i class="button--icon fa fa-download"></i> Download <small>1.1.1</small>
+                                </a>
+                                <a class="button button-secundary" href="https://github.com/frontstart/theme-frontstart" target="_blank">
+                                    <i class="button--icon fa fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                            <p class="p">
+                                You can also add Theme FrontStart to your <code class="code">bower.json</code> file in your FrontStart project.
+                            </p>
+                        </div>
+
+                        <!--<div class="cell-1-2 cell-small-1-1">
+                            <h3 class="h3">Compiled</h3>
+                            <div class="containerStack containerStack-gutter-1 containerStack-small-block containerStack-medium-block">
+                                <a class="button" href="http://www.frontstart.org/download/theme-frontstart-1.1.0cmp.zip">
+                                    <i class="button--icon fa fa-download"></i> Download <small>1.1.0cmp</small>
+                                </a>
+                            </div>
+                            <p class="p">
+                                Download this version for usage without FrontStart.
+                            </p>
+                        </div>-->
+                    </div>
+
+                    <h3 class="h3">Compatibility</h3>
+                    <table class="table table-zebra">
+                        <tr>
+                            <th>Compatibility</th>
+                            <td>FrontStart 0.6.0 or higher</td>
+                        </tr>
+                        <tr>
+                            <th>Required FrontStart components</th>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <th>Dependencies</th>
+                            <td>None</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- CSS elements -->
+                <section data-nav-aside-section id="css-elements">
+                    <h2 class="h2 hx-underlined">CSS elements</h2>
+                    <p class="p">
+                        Use CSS elements as building blocks to set up a website.
+                        Most CSS elements are automatically applied to HTML elements within the class <code class="code">.theme</code>.
+                    </p>
+
+                    <pre class="pre"><code class="language-markup">
+&lt;section>
+    &lt;h1 class="h1">My heading&lt;/h1>
+    &lt;p class="p">Lorem Ipsum dolor sit amet&lt;/p>
+&lt;/section>
+
+&lt;!-- Same result as above -->
+&lt;section class="theme">
+    &lt;h1>My heading&lt;/h1>
+    &lt;p>Lorem Ipsum dolor sit amet&lt;/p>
+&lt;/section>
+                    </code></pre>
+
+                    <!-- Typography -->
+                    <div data-nav-aside-section id="typography">
+                        <h3 class="h3 hx-underlined">Typography</h3>
+
+                        <!-- Text -->
+                        <h4 class="h4">Text</h4>
+                        <p class="p">
+                            Style headings with <code class="code">.h1</code> up to <code class="code">.h6</code>
+                            and paragraphs with <code class="code">.p</code>.
+                            There are also modifier classes available.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Class</th>
+                                    <th>Modifier class</th>
+                                    <th class="element-small-hidden">Within <code class="code">.theme</code></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Heading 1</td>
+                                    <td><code class="code">.h1</code></td>
+                                    <td><code class="code">.hx-underlined</code></td>
+                                    <td class="element-small-hidden"><code class="code">&lt;h1></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Heading 2</td>
+                                    <td><code class="code">.h2</code></td>
+                                    <td><code class="code">.hx-underlined</code></td>
+                                    <td class="element-small-hidden"><code class="code">&lt;h2></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Heading 3</td>
+                                    <td><code class="code">.h3</code></td>
+                                    <td><code class="code">.hx-underlined</code></td>
+                                    <td class="element-small-hidden"><code class="code">&lt;h3></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Heading 4</td>
+                                    <td><code class="code">.h4</code></td>
+                                    <td><code class="code">.hx-underlined</code></td>
+                                    <td class="element-small-hidden"><code class="code">&lt;h4></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Heading 5</td>
+                                    <td><code class="code">.h5</code></td>
+                                    <td><code class="code">.hx-underlined</code></td>
+                                    <td class="element-small-hidden"><code class="code">&lt;h5></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Heading 6</td>
+                                    <td><code class="code">.h6</code></td>
+                                    <td><code class="code">.hx-underlined</code></td>
+                                    <td class="element-small-hidden"><code class="code">&lt;h6></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Paragraph</td>
+                                    <td><code class="code">.p</code></td>
+                                    <td>
+                                        <code class="code">.p-big</code><br />
+                                        <code class="code">.p-tiny</code><br />
+                                        <code class="code">.p-stretched</code><br />
+                                        <code class="code">.p-compressed</code>
+                                    </td>
+                                    <td class="element-small-hidden"><code class="code">&lt;p></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Anchor</td>
+                                    <td><code class="code">.a</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;a></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Strong</td>
+                                    <td><code class="code">.strong</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;strong></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Emphasis</td>
+                                    <td><code class="code">.em</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;em></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Quote</td>
+                                    <td><code class="code">.q</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;q></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Code</td>
+                                    <td><code class="code">.code</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;code></code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;h1 class="h1 hx-underlined">Heading 1&lt;/h1>
+&lt;p class="p p-big">Lorem ipsum dolor sit amet.&lt;/p>
+
+&lt;h2 class="h2">Heading 2&lt;/h2>
+&lt;p class="p">
+    &lt;strong class="strong">Consectetur adipiscing elit&lt;/strong>,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    &lt;em class="em">Ut enim ad minim veniam&lt;/em>,
+    quis nostrud exercitation ullamco laboris nisi ut
+    &lt;a class="a">aliquip ex ea commodo&lt;/a> consequat.
+    Duis aute irure dolor &lt;q class="q">in reprehenderit&lt;/q>
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+&lt;/p>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="h1 hx-underlined">Heading 1</div>
+                            <p class="p p-big">Lorem ipsum dolor sit amet.</p>
+
+                            <div class="h2">Heading 2</div>
+                            <p class="p">
+                                <span class="strong">Consectetur adipiscing elit</span>,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                <span class="em">Ut enim ad minim veniam</span>,
+                                quis nostrud exercitation ullamco laboris nisi ut <span class="a">aliquip ex ea commodo</span> consequat.
+                                Duis aute irure dolor <span class="q">in reprehenderit</span> in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+                        <h4 class="h4">Lists</h4>
+                        <p class="p">Create ordered, unordered and description lists.</p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Class</th>
+                                    <th>Modifier class</th>
+                                    <th class="element-small-hidden">Within <code class="code">.theme</code></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Unordered list</td>
+                                    <td><code class="code">.ul</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;ul></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Ordered list</td>
+                                    <td><code class="code">.ol</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;ol></code></td>
+                                </tr>
+                                <tr>
+                                    <td>Description list</td>
+                                    <td><code class="code">.dl</code></td>
+                                    <td>No</td>
+                                    <td class="element-small-hidden"><code class="code">&lt;dl></code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;ul class="ul">
+    &lt;li>Lorem ipsum dolor Sit amet&lt;/li>
+    &lt;li>consectetur adipiscing elit&lt;/li>
+&lt;/ul>
+
+&lt;ol class="ol">
+    &lt;li>Lorem ipsum dolor Sit amet&lt;/li>
+    &lt;li>consectetur adipiscing elit&lt;/li>
+&lt;/ol>
+
+&lt;dl class="dl">
+    &lt;dt>Lorem ipsum dolor Sit amet&lt;/dt>
+    &lt;dd>consectetur adipiscing elit&lt;/dd>
+    &lt;dd>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&lt;/dd>
+&lt;/dl>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <ul class="ul">
+                                <li>Lorem ipsum dolor Sit amet</li>
+                                <li>consectetur adipiscing elit</li>
+                            </ul>
+
+                            <ol class="ol">
+                                <li>Lorem ipsum dolor Sit amet</li>
+                                <li>consectetur adipiscing elit</li>
+                            </ol>
+
+                            <dl class="dl">
+                                <dt>Lorem ipsum dolor Sit amet</dt>
+                                <dd>consectetur adipiscing elit</dd>
+                                <dd>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</dd>
+                            </dl>
+                        </div>
+                    </div><!-- / #typography -->
+
+                    <!-- Tables -->
+                    <div data-nav-aside-section id="tables">
+                        <h3 class="h3 hx-underlined">Tables</h3>
+                        <p class="p">Create clear and good looking tables</p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Class</th>
+                                    <th>Modifier class</th>
+                                    <th class="element-small-hidden">Within <code class="code">.theme</code></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Table</td>
+                                    <td><code class="code">.table</code></td>
+                                    <td>
+                                        <code class="code">.table-wide</code><br />
+                                        <code class="code">.table-fixed</code><br />
+                                        <code class="code">.table-smoked</code><br />
+                                        <code class="code">.table-zebra</code>
+                                    </td>
+                                    <td class="element-small-hidden"><code class="code">&lt;table></code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="box" data-box-caption="Example">
+                            <table class="table table-wide table-zebra">
+                                <thead>
+                                    <tr>
+                                        <th>Table header</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Table data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Table data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Table data</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Table data (footer)</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;table class="table table-wide table-zebra">
+    &lt;thead>
+        &lt;tr>
+            &lt;th>Table header&lt;/th>
+        &lt;/tr>
+    &lt;/thead>
+    &lt;tbody>
+        &lt;tr>
+            &lt;td>Table data&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Table data&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Table data&lt;/td>
+        &lt;/tr>
+    &lt;/tbody>
+    &lt;tfoot>
+        &lt;tr>
+            &lt;td>Table data (footer)&lt;/td>
+        &lt;/tr>
+    &lt;/tfoot>
+&lt;/table>
+                        </code></pre>
+                    </div><!-- / #tables -->
+
+                    <!-- Buttons -->
+                    <div data-nav-aside-section id="buttons">
+                        <h3 class="h3 hx-underlined">Buttons</h3>
+                        <p class="p">
+                            Create buttons with the class <code class="code">.button</code>.
+                            You can apply this class on many HTML elements.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Class</th>
+                                    <th>Modifier class</th>
+                                    <th class="element-small-hidden">Within <code class="code">.theme</code></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Button</td>
+                                    <td><code class="code">.button</code></td>
+                                    <td>
+                                        <code class="code">.button-positive</code><br />
+                                        <code class="code">.button-resistance</code><br />
+                                        <code class="code">.button-negative</code>
+                                        <code class="code">.button-transparent</code>
+                                        <code class="code">.button-secundairy</code>
+                                        <code class="code">.button-big</code>
+                                        <code class="code">.button-tiny</code>
+                                    </td>
+                                    <td class="element-small-hidden">
+                                        <code class="code">&lt;button></code><br />
+                                        <code class="code">&lt;input type="submit" /></code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;button class="button">Button tag&lt;/button>
+&lt;button class="button button-disabled">Disabled&lt;/button>
+&lt;a class="button button-positive">Anchor tag&lt;/a>
+&lt;input class="button button-resistance" type="submit" value="Input submit tag" />
+&lt;div class="button button-negative">Div tag&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="element-margin-bottom-1">
+                                <button class="button">Button tag</button>
+                                <button class="button" disabled>Disabled</button>
+                                <a class="button button-positive">Anchor tag</a>
+                                <input class="button button-resistance" type="submit" value="Input submit tag" />
+                                <div class="button button-negative">Div tag</div>
+                            </div>
+                            <div class="element-margin-bottom-1">
+                                <button class="button button-transparent">Transparent</button>
+                                <button class="button button-secundary">Secundairy</button>
+                            </div>
+                            <div>
+                                <button class="button button-big">Big</button>
+                                <button class="button button-tiny">Tiny</button>
+                            </div>
+                        </div>
+                    </div><!-- / #buttons -->
+
+                    <!-- Form elements -->
+                    <div data-nav-aside-section id="forms">
+                        <h3 class="h3 hx-underlined">Forms</h3>
+                        <p class="p">
+                            Style forms in a simple way.
+                        </p>
+
+                        <table class="table table-wide table-zebra">
+                            <thead>
+                                <tr>
+                                <th>Element</th>
+                                <th>Class</th>
+                                <th>Modifier class</th>
+                                <th class="element-small-hidden">Within <code class="code">.theme</code></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Form</td>
+                                <td><code class="code">.form</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden"><code class="code">&lt;form></code></td>
+                            </tr>
+                            <tr>
+                                <td>Label</td>
+                                <td><code class="code">.label</code></td>
+                                <td><code class="code">No</code></td>
+                                <td class="element-small-hidden"><code class="code">&lt;label></code></td>
+                            </tr>
+                            <tr>
+                                <td>Label for</td>
+                                <td><code class="code">.labelfor</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden">No</td>
+                            </tr>
+                            <tr>
+                                <td>Input (text etc.)</td>
+                                <td><code class="code">.input</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden">
+                                    <code class="code">&lt;input type="(several types)" /></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Input checkbox</td>
+                                <td><code class="code">.inputCheckbox</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden">
+                                    <code class="code">&lt;input type="checkbox" /></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Input radio</td>
+                                <td><code class="code">.inputRadio</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden">
+                                    <code class="code">&lt;input type="radio" /></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Input stack</td>
+                                <td><code class="code">.inputStack</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden">No</td>
+                            </tr>
+                            <tr>
+                                <td>Select</td>
+                                <td><code class="code">.select</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden"><code class="code">&lt;select></code></td>
+                            </tr>
+                            <tr>
+                                <td>Text area</td>
+                                <td><code class="code">.textarea</code></td>
+                                <td>No</td>
+                                <td class="element-small-hidden"><code class="code">&lt;textarea></code></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                        <pre class="pre"><code class="language-markup">
+&lt;label class="label">Type something&lt;/label>
+&lt;input class="input" placeholder="Your name" type="text" />
+
+&lt;label class="label">Select something&lt;/label>
+&lt;select class="select">
+    &lt;option>Lorem ipsum&lt;/option>
+    &lt;option>Dolor&lt;/option>
+    &lt;option>Sit amet&lt;/option>
+&lt;/select>
+
+&lt;label class="label">Type something&lt;/label>
+&lt;textarea class="textarea" placeholder="Your text" rows="4">&lt;/textarea>
+
+&lt;label class="label">Check something&lt;/label>
+&lt;label class="labelFor">&lt;input class="inputCheckbox" type="checkbox" />Something&lt;/label>
+&lt;label class="labelFor">&lt;input class="inputCheckbox" type="checkbox" />Something&lt;/label>
+
+&lt;label class="label">Pick one&lt;/label>
+&lt;label class="labelFor">&lt;input class="inputRadio" type="radio" />One&lt;/label>
+&lt;label class="labelFor">&lt;input class="inputRadio" type="radio" />Two&lt;/label>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <label class="label">Type something</label>
+                            <input class="input" placeholder="Your name" type="text" />
+
+                            <label class="label">Select something</label>
+                            <select class="select">
+                                <option>Lorem ipsum</option>
+                                <option>Dolor</option>
+                                <option>Sit amet</option>
+                            </select>
+
+                            <label class="label">Type something</label>
+                            <textarea class="textarea" placeholder="Your text" rows="4"></textarea>
+
+                            <label class="label">Check something</label>
+                            <label class="labelFor"><input class="inputCheckbox" type="checkbox" />Something</label>
+                            <label class="labelFor"><input class="inputCheckbox" type="checkbox" />Something</label>
+
+                            <label class="label">Pick one</label>
+                            <label class="labelFor"><input class="inputRadio" type="radio" />One</label>
+                            <label class="labelFor"><input class="inputRadio" type="radio" />Two</label>
+                        </div>
+
+                        <pre class="pre"><code class="language-markup">
+&lt;div class="inputStack">
+    &lt;label class="label">Type something&lt;/label>
+    &lt;input class="input" placeholder="Your name" type="text" />
+&lt;/div>
+
+&lt;div class="inputStack">
+    &lt;label class="label">Pick one&lt;/label>
+    &lt;label class="labelFor">&lt;input class="inputRadio" type="radio" />One&lt;/label>
+    &lt;label class="labelFor">&lt;input class="inputRadio" type="radio" />Two&lt;/label>
+&lt;/div>
+                        </code></pre>
+
+                        <div class="box" data-box-caption="Example">
+                            <div class="inputStack">
+                                <label class="label">Type something</label>
+                                <input class="input" placeholder="Your name" type="text" />
+                            </div>
+
+                            <div class="inputStack">
+                                <label class="label">Pick one</label>
+                                <label class="labelFor"><input class="inputRadio" type="radio" />One</label>
+                                <label class="labelFor"><input class="inputRadio" type="radio" />Two</label>
+                            </div>
+                        </div>
+                    </div><!-- / #forms -->
+                </section>
+            </div><!-- / Content -->
+        </div>
+    </div><!-- / .container -->
+
+    <!-- Footer -->
+    <footer class="footer" data-footer-sticky>
+        <div class="container">
+            <p class="p p-tiny">
+                &copy; 2016 <a href="http://www.frontstart.org" class="a">FrontStart</a> -
+                Created by Ben Besuijen
+            </p>
+        </div>
+    </footer>
+
+    <script src="http://frontstart.org/hosted/prism.js"></script>
+    <script src="/frontstart/main.js"></script>
+    <!-- @exclude -->
+    <script>
+      document.write('<script src="http://'
+      + (location.host || 'localhost').split(':')[0]
+      + ':35729/livereload.js"></'
+      + 'script>');
+    </script>
+    <!-- @endexclude -->
+</body>
+</html>

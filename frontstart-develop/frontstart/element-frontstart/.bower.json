@@ -1,0 +1,14 @@
+{
+  "name": "element-frontstart",
+  "homepage": "https://github.com/frontstart/element-frontstart",
+  "version": "1.1.1",
+  "_release": "1.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.1",
+    "commit": "273fdb90480c0ee61453189870f10da767faf8ad"
+  },
+  "_source": "git://github.com/frontstart/element-frontstart.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/frontstart/element-frontstart.git"
+}

@@ -1,0 +1,25 @@
+/**
+ * Box
+ */
+
+.box {
+    border: 1px solid color(gray, light);
+    border-radius: 5px;
+    font-size: font(primary, size);
+    margin-bottom: offset(2);
+    padding: offset();
+    position: relative;
+
+    &[data-box-caption] {
+        &::before {
+            @extend .h5;
+            background-color: color(white);
+            content: attr(data-box-caption);
+            line-height: 1rem;
+            margin-left: -5px;
+            padding: 0 5px !important;
+            position: absolute;
+            top: -0.5rem;
+        }
+    }
+}
